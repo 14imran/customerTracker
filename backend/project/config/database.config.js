@@ -5,8 +5,8 @@ let configOptions = {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 }
-let MONGODB_URI =
-  'mongodb+srv://imran:abc12345678@cluster0.fhlcu.mongodb.net/Glasco?retryWrites=true&w=majority'
+let MONGODB_URI = process.env.MONGODB_URI
+  
 
 mongoose
   .connect(MONGODB_URI, configOptions)
